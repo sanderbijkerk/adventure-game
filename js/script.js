@@ -82,13 +82,21 @@ function garden() {
 	option1.innerHTML = "Ga terug naar binnen"; 
 	option1.setAttribute('onclick','home()')
 	option2.innerHTML = "Ga kijken bij de persoon op straat";
-	option2.setAttribute('onclick','person()')
+	option2.setAttribute('onclick','street()')
 	option3.innerHTML = "Ga naar het huis van je buren";
 	option3.setAttribute('onclick','home2()')
 	title.innerHTML = "Tuin";
 	text.innerHTML = "Je bent naar buiten gegaan. Je ziet dat iedereen in de straat uit zijn huis is gegaan. Alle deuren van de huizen staan open. Je ziet iemand op de straat liggen.";
 	img.src = "img/tuin.jpg";
 	console.log("Tuin")
+}
+
+function street() {
+	if (knife == true) {
+		person();
+	} else {
+		gameover();
+	}
 }
 
 function person() {
